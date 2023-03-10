@@ -20,12 +20,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
 	private final HelloService helloService;
-	private final ApplicationContext applicationContext;
 
-	public HelloController(HelloService helloService, ApplicationContext applicationContext) {
+	public HelloController(HelloService helloService) {
 		this.helloService = helloService;
-		this.applicationContext = applicationContext;
-		System.out.println(applicationContext);
 	}
 
 	@GetMapping("/hello")
